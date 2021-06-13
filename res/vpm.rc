@@ -1,0 +1,17 @@
+#include "..\WinAPI\resource.h"
+
+// The icon for the EXE (as viewed by Explorer) is
+// the first icon in the resource file, which are
+// in turn stored in ascending order by their resource ID.
+// Therefore, the Icon with the lowest numeric or
+// alphanumeric ID will be used by Explorer as the EXE icon.
+
+ICO1 ICON vpm_icon.ico
+ICO2 ICON play.ico
+ICO3 ICON played.ico
+ICO4 ICON eye.ico
+ICO5 ICON exclam.ico
+
+1 24 XPTheme.xml
+
+//resource script file

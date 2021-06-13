@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="generator" content="MaNo the Markdown Notepad">
+<meta name="identifier-url" content="http://mougino.free.fr">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<link href="http://mougino.free.fr/markdown1.css" media="all" rel="stylesheet">
+<link href="http://mougino.free.fr/markdown2.css" media="all" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" media="(device-height: 568px)">
+<title>VLC Playlist Manager</title>
+<link rel="icon" type="image/x-icon" href="http://mougino.free.fr/MaNo.ico">
+<meta name="theme-color" content="#1e2327">
+</head>
+<body>
+
+<div class="repository-content">
+<div class="file">
+
+<div id="readme" class="readme blob instapaper_body">
+<article class="markdown-body entry-content" itemprop="text">
+
+
+<p><p><a href="vpm_icon.png" target="_blank"><img src="vpm_icon.png" alt="vpm_icon.png"></a></p></p>
+<p></p>
+<h1><a id="user-content-vlc-playlist-manager-help" class="anchor" href="#vlc-playlist-manager-help" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VLC Playlist Manager - Help</h1>
+<p>
+Ever wanted to binge watch seasons of a TV show over multiple sessions/days in VLC?
+Then you know it's not an easy task, as VLC cannot resume a playlist...</p>
+<p>
+Until now! <strong>VLC Playlist Manager</strong> is a third party program that takes care of 
+resuming playlists in VLC <g-emoji alias="wink" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f609.png" ios-version="6.0">&#x1f609;</g-emoji></p>
+<p></p>
+<h2><a id="user-content-table-of-content" class="anchor" href="#table-of-content" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of content</h2>
+<p></p>
+<ul>
+<li><a href="#supported-playlists">Supported playlists</a></li>
+<li><a href="#first-use">First use</a></li>
+<li><a href="#open-a-playlist">Open a playlist</a></li>
+	<ul>
+	<li><a href="#from-the-program">from the program</a></li>
+	<li><a href="#by-drag-and-dropping-a-playlist-on-the-program-window">by drag and dropping a playlist on the program window</a></li>
+	<li><a href="#by-drag-and-dropping-a-playlist-on-the-exe">by drag and dropping a playlist on the exe</a></li>
+	<li><a href="#in-command-line">in command line</a></li>
+	</ul>
+<li><a href="#recent-playlists">Recent playlists</a></li>
+<li><a href="#force-resume">Force resume</a></li>
+<li><a href="#vlc-listener-and-notifications">VLC listener and notifications</a></li>
+<li><a href="#source-code">Source code</a></li>
+</ul>
+<p></p>
+<h1><a id="user-content-supported-playlists" class="anchor" href="#supported-playlists" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supported playlists</h1>
+<p>
+<strong>VLC Playlist Manager</strong> supports <code>.xspf</code>, <code>.m3u</code> and <code>.m3u8</code> playlists.</p>
+<p>
+To create such a playlist, from VLC click the "Toggle playlist" button, as pictured here:</p>
+<p>
+<p><a href="screenshot_01.jpg" target="_blank"><img src="screenshot_01.jpg" alt="screenshot_01.jpg"></a></p></p>
+<p>
+Then add media files by drag and dropping folders to the playlist window:</p>
+<p>
+<p><a href="screenshot_02.jpg" target="_blank"><img src="screenshot_02.jpg" alt="screenshot_02.jpg"></a></p></p>
+<p>
+Finally, use the VLC option <strong>Media</strong> > <strong>Save Playlist to File (Ctrl+Y)</strong> in order to
+save the playlist to a <code>.xspf</code>, <code>.m3u</code> or <code>.m3u8</code> file.</p>
+<p>
+<p><a href="screenshot_03.jpg" target="_blank"><img src="screenshot_03.jpg" alt="screenshot_03.jpg"></a></p></p>
+<p></p>
+<h1><a id="user-content-first-use" class="anchor" href="#first-use" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First use</h1>
+<p>
+When you open <strong>VLC Playlist Manager</strong> for the first time, its window may seem a bit empty.
+The first thing you need to do is to load a playlist (see previous chapter on how to create
+a compatible playlist with VLC).</p>
+<p>
+<p><a href="screenshot_04.jpg" target="_blank"><img src="screenshot_04.jpg" alt="screenshot_04.jpg"></a></p></p>
+<p></p>
+<h1><a id="user-content-open-a-playlist" class="anchor" href="#open-a-playlist" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open a playlist</h1>
+<p></p>
+<h2><a id="user-content-from-the-program" class="anchor" href="#from-the-program" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>from the program</h2>
+<p>
+Just click the "Load" button to browse and open a <code>.xspf</code>, <code>.m3u</code> or <code>.m3u8</code> playlist.</p>
+<p>
+<p><a href="screenshot_05.jpg" target="_blank"><img src="screenshot_05.jpg" alt="screenshot_05.jpg"></a></p></p>
+<p></p>
+<h2><a id="user-content-by-drag-and-dropping-a-playlist-on-the-program-window" class="anchor" href="#by-drag-and-dropping-a-playlist-on-the-program-window" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>by drag and dropping a playlist on the program window</h2>
+<p>
+Simply drag and drop a <code>.xspf</code>, <code>.m3u</code> or <code>.m3u8</code> playlist onto the window of 
+<strong>VLC Playlist Manager</strong> in order to load this playlist.</p>
+<p>
+<p><a href="screenshot_06.jpg" target="_blank"><img src="screenshot_06.jpg" alt="screenshot_06.jpg"></a></p></p>
+<p></p>
+<h2><a id="user-content-by-drag-and-dropping-a-playlist-on-the-exe" class="anchor" href="#by-drag-and-dropping-a-playlist-on-the-exe" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>by drag and dropping a playlist on the exe</h2>
+<p>
+In the Windows File Explorer, drag and drop a <code>.xspf</code>, <code>.m3u</code> or <code>.m3u8</code> playlist
+onto the <strong>VLC Playlist Manager</strong> executable in order to open the program with this playlist.</p>
+<p>
+<p><a href="screenshot_07.jpg" target="_blank"><img src="screenshot_07.jpg" alt="screenshot_07.jpg"></a></p></p>
+<p></p>
+<h2><a id="user-content-in-command-line" class="anchor" href="#in-command-line" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>in command line</h2>
+<p>
+Finally, you can launch <strong>VLC Playlist Manager</strong> with a playlist as argument:</p>
+<p></p>
+<pre><code>"C:\path\to\VLC Playlist Manager.exe" G:\TV-SHOWS\Futurama.xspf</code></pre>
+<h1><a id="user-content-recent-playlists" class="anchor" href="#recent-playlists" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recent playlists</h1>
+<p>
+Once a <code>.xspf</code>, <code>.m3u</code> or <code>.m3u8</code> playlist has been opened in <strong>VLC Playlist Manager</strong>,
+you will find it again in the quick-access dropdown list at the top of the program:</p>
+<p>
+<p><a href="screenshot_08.jpg" target="_blank"><img src="screenshot_08.jpg" alt="screenshot_08.jpg"></a></p></p>
+<p>
+This allows you to easily switch between TV shows in case you are watching more than one.</p>
+<p></p>
+<h1><a id="user-content-force-resume" class="anchor" href="#force-resume" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Force resume</h1>
+<p>
+When you load a new playlist, <strong>VLC Playlist Manager</strong> will launch VLC with the very first
+episode of the list. Then after watching a few episodes, the already-watched episodes will be
+shown with a white "play" icon, and the last episode to watch will have a black "play" icon.</p>
+<p>
+You can decide to force-resume at any episode by double-clicking on a media file in the list:</p>
+<p>
+<p><a href="screenshot_09.jpg" target="_blank"><img src="screenshot_09.jpg" alt="screenshot_09.jpg"></a></p></p>
+<p></p>
+<h1><a id="user-content-vlc-listener-and-notifications" class="anchor" href="#vlc-listener-and-notifications" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VLC listener and notifications</h1>
+<p>
+Once <strong>VLC Playlist Manager</strong> starts or resumes a playlist, it will activate a small agent in
+memory called the <strong>VLC listener</strong>, in order to keep track of the last episode being watched.</p>
+<p>
+When <strong>VLC listener</strong> is active, it shows as a small "eye" notification at the bottom of the program:</p>
+<p>
+<p><a href="screenshot_10.jpg" target="_blank"><img src="screenshot_10.jpg" alt="screenshot_10.jpg"></a></p></p>
+<p>
+When the user closes VLC, the <strong>VLC listener</strong> agent detects it and closes itself as well.
+To restart the agent, use the "Resume playlist" button or double-click on an episode.</p>
+<p>
+<strong>VLC Playlist Manager</strong> needs to be kept open when you're watching your episodes.
+Thanks to the <strong>VLC listener</strong> agent, it will check the last file played by VLC from the file
+<code>%AppData%\vlc\vlc-qt-interface.ini</code>. This way, you don't have to do any manual operation:
+just watch your episodes, and <strong>VLC Playlist Manager</strong>  will automatically bookmark the last
+watched episode for you!</p>
+<p>
+If for any reason the <strong>VLC listener</strong> agent is not able to access or read the VLC recent file
+<code>%AppData%\vlc\vlc-qt-interface.ini</code> then it will show an error with this exclamation point icon:</p>
+<p>
+<p><a href="screenshot_11.jpg" target="_blank"><img src="screenshot_11.jpg" alt="screenshot_11.jpg"></a></p></p>
+<p>
+In this case, the save functionality of the last watched episode may not work properly.
+You can either double-click the next episode for <strong>VLC Playlist Manager</strong> to save it manually,
+or better yet drop an email to the author at <a href="mailto:mougino@free.fr">mougino@free.fr</a> so he
+might help find a fix.</p>
+<p></p>
+<h1><a id="user-content-source-code" class="anchor" href="#source-code" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Source code</h1>
+<p>
+<strong>VLC Playlist Manager</strong> is free and open source software released under a GNU GPL v3 licence.
+The licence can be found at <a href="https://www.gnu.org/licenses/gpl.txt" target="_blank">https://www.gnu.org/licenses/gpl.txt</a>
+The code for the program can be found at <a href="https://github.com/mougino/VLC-Playlist-Manager/" target="_blank">https://github.com/mougino/VLC-Playlist-Manager/</a></p>
+<p></p>
+
+</article>
+</div><!--/readme-->
+
+</div> <!--/file-->
+</div> <!--/repository-content-->
+
+<script src="http://mougino.free.fr/markdown1.js"></script>
+<script src="http://mougino.free.fr/markdown2.js"></script>
+
+</body>
+</html>
